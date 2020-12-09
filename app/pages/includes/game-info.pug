@@ -1,0 +1,15 @@
+section.game-info__section
+    .game-info__container
+        h3.game-info__title Дополнительная информация
+        .game-info__content
+            each item in data
+                .game-info__content__item
+                    .game-info__content__item__title #{item.title}
+                    .game-info__content__item__text #{item.text}
+        .game-info__buttons
+            a.game-info__button.first(href=googlePlay)
+                img(src="/img/dest/google_play_black.svg", alt="app")
+            a.game-info__button(href=appStore)
+                img(src="/img/dest/app_store_black.svg", alt="")
+
+            

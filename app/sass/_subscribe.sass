@@ -1,0 +1,16 @@
+.subscribe
+    &__container
+        @apply container justify-center mt-16
+    &__content
+
+        @apply text-center sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2
+    &__title
+        @apply text-4xl font-extrabold
+    &__form
+        @apply  w-full relative inline-flex my-8
+        button
+            @apply bg-green-400 text-white  rounded-full absolute flex h-14 w-14 right-1 top-1 cursor-pointer
+            svg
+                @apply m-auto
+    &__input
+        @apply w-full border border-gray-400  rounded-full h-16 py-2 px-6 hover:border-green-500 focus:outline-none

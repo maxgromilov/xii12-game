@@ -1,0 +1,32 @@
+.section-nav__divider
+section.section-nav
+    .section-nav__container
+      a.section-nav__logo(href="/")
+        img(src="img/src/logo.svg", alt="")
+      nav.section-nav__nav.hidden
+        - var navArr = [{name: "Каталог", link: "/" },{name: "О компании", link: "/about" }, {name: "Поддержка", link: "/support" }]
+        each nav in navArr 
+          li.section-nav__nav__item
+            a(href=nav.link) #{nav.name}
+      .section-nav__search
+        label(for="search-nav")
+          <svg width="19" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.759" cy="7.688" r="6.688" stroke="currentColor" stroke-width="2"/><rect x="12.031" y="13.168" width="1.708" height="6.834" rx=".854" transform="rotate(-45 12.03 13.168)" fill="currentColor"/></svg> 
+        input#search-nav.section-nav__search__input(placeholder="Поиск")
+        
+          
+      .section-nav__login 
+        a.section-nav__login__button(href="/login") 
+          span Войти
+      .section-nav__lang
+        include dropdown.pug
+      .section-nav__burger
+        svg.section-nav__burger__icon(aria-hidden='true', focusable='false', data-prefix='fas', data-icon='bars', role='img', xmlns='http://www.w3.org/2000/svg', viewbox='0 0 448 512')
+          path(fill='currentColor', d='M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z')
+
+      
+
+      
+
+        
+
+      

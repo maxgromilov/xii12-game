@@ -1,0 +1,29 @@
+.game-header
+    background-size: 1920px auto
+    min-height: 950px
+    @media ( max-width: 1023px )
+        background-size: 1520px auto
+        min-height: 750px
+    @media ( max-width: 767px )
+        background: none !important
+        min-height: auto
+    @apply  sm:py-8 flex section-h bg-gray-100 bg-center  bg-no-repeat
+    &__container
+        @apply container
+    &__content
+        @apply text-center mt-auto mx-auto sm:mb-20 xl:w-1/2 lg:w-2/5 md:w-2/3  relative z-20
+        &__title
+            @apply font-extrabold text-4xl
+        &__text
+            @apply  md:text-lg
+        &__divider
+            @apply inline-block h-1 my-8 w-32
+        &__buttons
+            @apply grid grid-cols-2 gap-4 sm:flex sm:pt-4 justify-center
+        &__button
+            @apply sm:pt-4 sm:mx-4 block
+            img
+                @apply  max-h-20 w-auto
+            &--first
+        &__image
+            @apply w-full md:hidden block mb-8  rounded-xl

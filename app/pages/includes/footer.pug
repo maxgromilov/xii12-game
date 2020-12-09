@@ -1,0 +1,31 @@
+//- .section-footer__divider
+section.section-footer
+    .section-footer__divider--top
+    .section-footer__bg
+        img.section-footer__bg__center(src="/img/dest/footer_bg_center.svg", alt="")
+        img.section-footer__bg__left(src="/img/dest/footer_bg_left.svg", alt="")
+        img.section-footer__bg__right(src="/img/dest/footer_bg_right.svg", alt="")
+    .section-footer__container
+        .section-footer__logo
+            img(src="img/src/logo_white.svg", alt="")
+        nav.section-footer__nav
+            - var navArr = [ {name: "Каталог", link: "/" }, {name: "О компании", link: "/about" }, {name: "Поддержка", link: "/support" }]
+            each nav in navArr 
+                li.section-footer__nav__item
+                    a(href=nav.link) #{nav.name}
+        .section-footer__search
+            label(for="search-footer") 
+                <svg width="19" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.759" cy="7.688" r="6.688" stroke="currentColor" stroke-width="2"/><rect x="12.031" y="13.168" width="1.708" height="6.834" rx=".854" transform="rotate(-45 12.03 13.168)" fill="currentColor"/></svg> 
+            input#search-footer.section-footer__search__input(placeholder="Поиск")
+        .section-footer__lang
+            include dropdown.pug
+    .section-footer__divider
+    .section-footer__container
+        .section-footer__coryright © 2020. Все права защищены.
+        .section-footer__social
+            each social in [{name:"instagram", link: "https://www.instagram.com/"}, {name:"youtube", link: "https://www.instagram.com/"}, {name:"facebook", link: "https://www.instagram.com/"}]
+                a.section-footer__social__link(href=social.link)
+                    img.section-footer__social__link__icon(src="/img/dest/"+ social.name + ".svg", alt="")
+
+script(src="js/app.min.js")
+

@@ -1,0 +1,14 @@
+section.game-heroes(id="game-heroes", class=textColor, style="background: " + bgColor + ";-bac-kground-image: url('" + bgImg +"')")
+  #stars
+  #stars2
+  #stars3
+  .game-heroes__container(class=container)
+    .game-heroes__content()
+      h2.game-heroes__title #{title}
+      .game-heroes__heroes(class=gridCols)
+        each hero in heroes
+          .game-heroes__hero(class=hero.gridClass)
+            img.game-heroes__hero__image(src=hero.image)
+            .game-heroes__hero__name(class=titleColor) #{hero.name}
+            p.game-heroes__hero__text #{hero.text}
+

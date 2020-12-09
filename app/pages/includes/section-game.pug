@@ -1,0 +1,12 @@
+section.section-game(id="section-game" style="background-image: url('" + bgImg +"')")
+  .section-game__container(class=container)
+    .section-game__content(class=textColor)
+      img.section-game__content__image(src=img, alt="")
+      h2.section-game__content__title #{title} 
+      .section-game__content__divider(class=color)
+      p.section-game__content__text #{text}
+        .section-game__content__buttons 
+          a.section-game__content__button.section-game__content__button--first(href=googlePlay)
+            img(src="/img/dest/google_play.svg", alt="") 
+          a.section-game__content__button(href=appStore)
+            img(src="/img/dest/app_store.svg", alt="")

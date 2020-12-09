@@ -1,0 +1,55 @@
+.game-description
+    background-size: 1920px auto
+    min-height: 850px
+    overflow: hidden
+    @media ( max-width: 1023px )
+        background-size: 1520px auto
+        min-height: 850px
+    @media ( max-width: 767px )
+        // background: none !important
+        min-height: auto
+
+    @apply py-36 md:py-16 flex relative section-h bg-gray-100 bg-center  bg-no-repeat
+
+    &__container
+        @apply container
+    &__mockup
+        left: 0
+        top: 0
+        right: 0
+        bottom: 0
+        background: no-repeat
+        background-position: 100%  center
+        @apply hidden lg:block absolute
+        @media ( max-width: $xl )
+            right: -25%
+
+    &__image
+        @apply w-full mb-8 flex
+
+    &__content
+        @apply  2xl:w-5/12 xl:w-1/3 lg:w-1/3  my-auto relative z-20
+        &__top-line
+            @apply flex w-full flex-row flex-wrap
+        &__title
+            @apply font-extrabold text-2xl sm:text-4xl
+        &__age
+            @apply sm:border-none border h-9 w-9 ml-auto sm:ml-8 bg-white font-extrabold text-center text-black flex items-center justify-center text-lg
+        &__stars
+            @apply mb-2 2xl:mb-0 order-first 2xl:order-last w-full 2xl:w-auto flex ml-0 2xl:ml-auto mt-5  2xl:my-auto text-gray-200
+        &__star
+            @apply  mr-2
+        &__text
+            @apply  md:text-lg
+        &__type
+            @apply font-extrabold my-5
+        &__buttons
+            @apply flex pt-4
+        &__button
+            @apply pt-4 block
+            img
+                @apply max-h-16 w-auto
+            &--first
+                @apply mr-2 md:mr-8
+        // &__image
+        //     @apply w-full lg:hidden block mb-8

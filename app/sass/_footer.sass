@@ -1,0 +1,68 @@
+.section-footer
+    min-height: 400px
+    @apply section-h relative flex-col flex text-white  bg-red-400 z-50  md:bg-white py-16 mt-8 sm:mt-0 md:pt-64
+    &__bg__left,
+    &__bg__center,
+    &__bg__right
+
+    &__bg__center
+        width: 1667px
+        height: 413px
+        max-width: none
+        right: 0
+        @apply  absolute bottom-0 md:block
+    &__bg__right
+        right: 0
+        @apply absolute bottom-0 md:block
+    &__bg__left
+        width: 345px
+        height: 392px
+        left: 0
+        z-index: 1
+        @apply  absolute bottom-0 hidden md:block
+    &__logo
+        @apply mb-6 sm:mb-0
+    &__divider
+        @apply md:h-16
+        &--top
+            md-64
+    &__burger
+        @apply ml-6 md:hidden
+        &__icon
+            @apply h-12 w-12 text-gray-200 hover:text-gray-400 cursor-pointer
+    &__container
+        @apply container relative z-10 flex-col md:flex-row
+    &__nav
+        @apply py-6 md:py-0 flex-col flex md:flex-row   md:static flex md:m-auto left-0 top-full right-0
+        &__item
+            @apply relative uppercase list-none mr-auto py-1 my-1 md:py-0 md:my-0 text-sm  md:mx-4
+            &:hover
+                &:after
+                    content: " "
+                    @apply absolute -bottom-0 md:-bottom-2 left-0 right-0 bg-white h-1
+    &__lang
+        @apply flex my-auto -ml-6 md:ml-4
+    &__login
+        @apply flex my-auto ml-auto md:ml-0
+        &__button
+            @apply flex border-2 border-gray-300 rounded-full h-12 py-2 px-6 hover:border-green-500 hover:text-white hover:bg-green-500
+            span
+                @apply m-auto
+    &__social
+        @apply flex w-full md:w-1/2 md:justify-end pt-8 flex-grow
+        &__link
+            @apply  mr-4 md:ml-4
+    &__coryright
+        @apply relative z-10 pt-8 w-full md:w-1/2 flex-grow-0
+        span
+            @apply m-auto
+    &__search
+        @apply hidden w-1/4 relative lg:flex my-auto ml-auto md:ml-0 mr-8
+        label
+            @apply absolute flex h-12 w-12 right-1 top-0 cursor-pointer
+            svg
+                @apply m-auto
+        &__input
+            @apply w-full border border-white bg-red-400 rounded-full h-12 py-2 sm:px-6 hover:border-green-500 focus:outline-none
+            &::placeholder
+                @apply text-white

@@ -1,0 +1,26 @@
+// Для стилизации используются класс CSS фреймворка Tailwind.
+// Класс подключаются в кастомные классы через директиву @apply.
+// Документация CSS фреймворка Tailwind https://tailwindcss.ru/docs/installation/.
+
+// При сборке CSS, анализируется все html страницы и из main.min.css удаляются неиспользованные классы
+// Эту опцию можно отключить в gulpfile.js закомментировать строку 71. 
+// При одключение удаления не спользуемых классов, 
+// фаил main.min.css может быть не прилично большим.
+@import '../../node_modules/owl.carousel/dist/assets/owl.carousel'
+
+@import config
+// Подключение CSS фреймворка Tailwindcss, кофигурация в gulpfile.js 
+@import tailwind
+@import base
+@import nav
+@import game
+@import dropdown
+@import cloud
+@import catalog
+@import footer
+@import game-header
+@import game-description
+@import game-carousel
+@import game-info
+@import subscribe
+@import heroes

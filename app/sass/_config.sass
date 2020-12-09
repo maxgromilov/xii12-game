@@ -1,0 +1,19 @@
+@mixin font($fname, $fstyle, $fweight, $furl)
+    @font-face
+        font-family: $fname
+        font-style: $fstyle
+        font-weight: $fweight
+        src: local($fname), url($furl) format('woff2')
+
+@include font('GothamPro', normal, 400, '../fonts/GothamPro.woff2')
+@include font('GothamPro', italic, 400, '../fonts/GothamPro-Italic.woff2')
+@include font('GothamPro', normal, 700, '../fonts/GothamPro-Bold.woff2')
+@include font('GothamPro', italic, 700, '../fonts/GothamPro-BoldItalic.woff2')
+@include font('GothamPro', normal, 900, '../fonts/GothamPro-Black.woff2')
+@include font('GothamPro', italic, 900, '../fonts/GothamPro-Blacktalic.woff2')
+
+$sm: 640px
+$md: 768px
+$lg: 1024px
+$xl: 1280px
+$xxl: 1536px 

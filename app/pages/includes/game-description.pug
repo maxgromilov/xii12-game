@@ -1,0 +1,29 @@
+section.game-description(id="game-description" style="background: " + bgColor + ";background-image: url('" + bgImg +"')")
+  .game-description__mockup(style="background-image: url('" + img +"')")
+  .game-description__container(class=container)
+    .game-description__content(class=textColor)
+      //- img.game-description__content__image(src=img)
+      .game-description__content__top-line
+        h2.game-description__content__title #{gameName} 
+        .game-description__content__age #{age}
+        .game-description__content__stars
+              - var n = 0
+              - var stars = stars
+              while n < stars
+                - n++
+                .game-description__content__start.text-yellow-400
+                  svg(width='24', height='23', fill='none', xmlns='http://www.w3.org/2000/svg')
+                    path( fill='currentColor', d='M23.845 8.564a1.645 1.645 0 00-1.33-1.12l-6.278-.913L13.428.846c-.554-1.125-2.394-1.125-2.948 0L7.672 6.53l-6.265.913a1.643 1.643 0 00-.909 2.805l4.542 4.415-1.07 6.248a1.649 1.649 0 00.654 1.61 1.65 1.65 0 001.733.123l5.597-2.951 5.613 2.951c.24.127.503.19.765.19.34 0 .68-.106.97-.313.506-.37.76-.993.654-1.61l-1.07-6.248 4.541-4.415c.449-.434.611-1.09.418-1.685z')
+
+              - var n = 0
+              - var stars = 5 - stars
+              while n < stars 
+                - n++
+                .game-description__content__star
+                  svg(width='24', height='23', fill='none', xmlns='http://www.w3.org/2000/svg')
+                    path( fill='currentColor', d='M23.845 8.564a1.645 1.645 0 00-1.33-1.12l-6.278-.913L13.428.846c-.554-1.125-2.394-1.125-2.948 0L7.672 6.53l-6.265.913a1.643 1.643 0 00-.909 2.805l4.542 4.415-1.07 6.248a1.649 1.649 0 00.654 1.61 1.65 1.65 0 001.733.123l5.597-2.951 5.613 2.951c.24.127.503.19.765.19.34 0 .68-.106.97-.313.506-.37.76-.993.654-1.61l-1.07-6.248 4.541-4.415c.449-.434.611-1.09.418-1.685z')
+                            
+      .game-description__content__type #{type}
+      p.game-description__content__text #{text}
+  
+      

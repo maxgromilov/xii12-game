@@ -1,0 +1,61 @@
+//- Секция шапки сайта
+include includes/head.pug
+
+//- Секция игры Casual GG
+- var title = "Casual GG" // Название игры
+- var text = "Мир опять под угрозой. Полчища ужасных насекомых захватили Телефонию, сможет ли планета стать прежней зависит только от тебя. Собери отряд доброй воли и выступи с решающим сражением против силы зла с десятками разнообразных орудий."
+- var color = "bg-red-400" // Цвет полоски
+- var bgImg = "/img/dest/main/render-1.jpg" // Изображение на десктопе
+- var img = "/img/dest/main/render-1-maobile.jpg" // Изображение на мобильных устройствах
+- var appStore = "https://apps.apple.com/us/app/telegram-messenger/id686449807" // Сылка на приложение App Store
+- var googlePlay = "https://play.google.com/store/apps/details?id=org.telegram.messenger&hl=ru&gl=US" // Сылка на приложение Google Play
+- var textColor = "md:text-black" // Цвет текса на десктопе
+- var container = "md:justify-start" // Проложение блока с контентом. Для положения с право "md:justify-end". Для положения с лево "md:justify-start".
+- var cloudColor = "white" // Цвет облока white или black
+- var cloudClasses = ""
+
+include includes/section-game.pug
+include includes/cloud.pug
+
+//- Секция игры Rainbow Mine
+- var title = "Rainbow Mine" // Название игры
+- var text = "Нам потребуется твой высший разум, чтобы справится с этой сложнейшей головоломкой по спасению времени. Мы уверены, что это в твоих силах. Да поможет тебе наша магия, кристаллы и магическая радуга."
+- var color = "bg-blue-400" // Цвет полоски
+- var bgImg = "/img/dest/main/render-2.jpg" // Изображение на десктопе
+- var img = "/img/dest/main/render-2-maobile.jpg" // Изображение на мобильных устройствах
+- var appStore = "https://apps.apple.com/us/app/telegram-messenger/id686449807" // Сылка на приложение App Store
+- var googlePlay = "https://play.google.com/store/apps/details?id=org.telegram.messenger&hl=ru&gl=US" // Сылка на приложение Google Play
+- var textColor = "md:text-white" // Цвет текса на десктопе
+- var container = "md:justify-end" // Проложение блока с контентом. Для положения с право "md:justify-end". Для положения с лево "md:justify-start".
+- var cloudColor = "black" // Цвет облока white или black 
+- var cloudClasses = "hidden"
+include includes/section-game.pug
+include includes/cloud.pug
+
+//- Секция игры Planets Juggler
+- var title = "Planets Juggler" // Название игры
+- var text = "Мы приглашаем тебя в космическое путешествие. Ты находишься за границей времени большого взрыва. Время и пространство находятся в опасности быть навсегда проглоченными черной дырой. В твоих твоих силах спасти планеты от вечного затухания. Транспортируй их в безопасный сектор и пригласи на помощь своих друзей."
+- var color = "bg-yellow-500" // Цвет полоски
+- var bgImg = "/img/dest/main/render-3.jpg" // Изображение на десктопе
+- var img = "/img/dest/main/render-3-maobile.jpg" // Изображение на мобильных устройствах
+- var appStore = "https://apps.apple.com/us/app/telegram-messenger/id686449807" // Сылка на приложение App Store
+- var googlePlay = "https://play.google.com/store/apps/details?id=org.telegram.messenger&hl=ru&gl=US" // Сылка на приложение Google Play
+- var textColor = "md:text-white" // Цвет текса на десктопе
+- var container = "md:justify-start" // Проложение блока с контентом. Для положения с право "md:justify-end". Для положения с лево "md:justify-start".
+- var cloudColor = "white" // Цвет облока white или black 
+- var cloudClasses = ""
+
+include includes/section-game.pug
+include includes/cloud.pug
+
+//- Каталог игр
+//- Документация https://owlcarousel2.github.io/OwlCarousel2/
+- var game1 = {name: 'Casual GG',  stars: 4, color: "red", link: "/casual-gg.html", image: '/img/dest/catalog/casual-gg.png', text: "Головоломка. Необходимо собрать цвета радуги в правильной последовательности.Головоломка. Необходимо собрать цвета радуги в правильной последовательности."}
+- var game2 = {name: 'Rainbow Mine',  stars: 5, color: "blue", link: "/rainbow-mine.html", image: '/img/dest/catalog/rainbow-mine.png' ,text: "Головоломка. Необходимо собрать цвета радуги в правильной последовательности."}
+- var game3 = {name: 'Planets Juggler',  stars: 3, color: "yellow", link: "/planets-juggler.html", image: '/img/dest/catalog/planets-juggler.png', text: "Головоломка. Необходимо собрать цвета радуги в правильной последовательности."}
+- var catalog = [game1, game2, game3, game1, game2, game3 ] 
+include includes/section-catalog.pug
+
+
+//- Секция подвала сайта
+include includes/footer.pug

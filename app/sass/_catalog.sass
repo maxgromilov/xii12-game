@@ -1,0 +1,102 @@
+.section-catalog
+    // background-size: 1920px auto
+    // min-height: 950px
+    // @media ( max-width: 1023px )
+    //     background-size: 1520px auto
+    //     min-height: 750px
+    // @media ( max-width: 767px )
+    //     background: none !important
+    //     min-height: auto
+
+    @apply  relative z-20 pt-8 sm:pt-32 pb-8 flex section-h bg-white bg-center bg-no-repeat
+    &__container
+        @apply container px-0
+    &__title
+        @apply text-4xl font-extrabold md:mb-8
+    &__all-game
+        @apply sm:ml-auto text-blue-400 hover:underline sm:mb-8 uppercase
+
+    &__carousel
+
+        @apply owl-carousel relative
+
+        .owl-item
+            height: 100%
+            display: flex
+        .owl-dots
+            text-align: center
+            // margin-top: 2rem
+            @apply -mt-6 md:mt-8
+        .owl-nav
+            display: flex
+            justify-content: space-between
+        &.section-catalog__carousel .owl-nav button.owl-prev,
+        &.section-catalog__carousel .owl-nav button.owl-next
+            top: 45%
+            display: flex
+            align-items: center
+            justify-content: center
+            font-size: 2rem
+            line-height: .5
+            &:focus
+                outline: none
+
+            &.disabled
+
+                opacity: .5
+                @apply bg-gray-200 shadow-none hover:bg-gray-200
+
+            @apply bg-white hover:bg-green-400 shadow-lg hover:shadow-none md:absolute h-10 w-10 rounded-full  flex justify-center items-center
+            span
+                position: relative
+                top: -.2rem
+        &.section-catalog__carousel .owl-nav button.owl-prev
+            @apply  left-0 sm:-left-14
+        &.section-catalog__carousel .owl-nav button.owl-next
+            @apply right-0 sm:-right-14
+        &.section-catalog__carousel button.owl-dot
+            width: 10px
+            height: 10px
+            background: #E5E2DC
+            border-radius: 30px
+            margin: 0 5px
+
+            &:focus
+                outline: none
+            &.active
+                width: 50px
+                height: 10px
+                background: #9DCB45
+                border-radius: 40px
+
+.catalog
+    &__item
+        @apply py-4 h-full relative text-white  rounded-xl overflow-hidden flex
+        &__content
+            @apply p-4 md:p-8 relative h-full flex flex-col rounded-xl overflow-hidden
+            &__bg
+                z-index: -1
+                @apply absolute h-64 left-0 right-0 bottom-0
+        &__image
+            @apply w-full relative sm:-mt-8 mb-8 rounded-xl overflow-hidden shadow-xl hover:shadow-none
+        &__name
+            @apply text-2xl font-extrabold mb-4
+        &__text
+            @apply mb-8
+        &__bg
+            @apply  absolute left-0 right-0 top-16 bottom-0
+            svg
+                @apply w-full relative
+        &__footer
+            @apply mt-auto flex
+        &__link
+            background-color: rgba(256,256,256, .25)
+            &:hover
+                background-color: rgba(256,256,256, 1)
+                color: #000
+
+            @apply ml-auto h-10 w-10 rounded-full  flex justify-center items-center
+        &__star
+            @apply mr-1
+        &__star
+            @apply my-auto

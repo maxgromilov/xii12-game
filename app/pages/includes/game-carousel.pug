@@ -1,0 +1,9 @@
+section.game-carousel
+    .game-carousel__container
+        #game-carousel.game-carousel__carousel
+            each image in images
+                .gallery__item 
+                    .gallery__item__content
+                        .gallery__item__image
+                            img(src=image.image, alt=image.title  )
+

@@ -1,0 +1,73 @@
+.game-carousel
+    // background-size: 1920px auto
+    // min-height: 950px
+    // @media ( max-width: 1023px )
+    //     background-size: 1520px auto
+    //     min-height: 750px
+    // @media ( max-width: 767px )
+    //     background: none !important
+    //     min-height: auto
+    @apply  relative z-20 mt-8 md:pt-32 pb-8 flex section-h bg-white bg-center bg-no-repeat
+    &__container
+        @apply container px-0
+    &__carousel
+
+        @apply owl-carousel relative
+        .owl-nav
+            display: flex
+            justify-content: space-between
+        .owl-item
+            height: 100%
+            display: flex
+        .owl-dots
+            text-align: center
+            @apply -mt-5 md:mb-0
+        &.game-carousel__carousel .owl-nav button.owl-prev,
+        &.game-carousel__carousel .owl-nav button.owl-next
+            top: 40%
+
+            align-items: center
+            justify-content: center
+            font-size: 2rem
+            line-height: .5
+            &:focus
+                outline: none
+            &.disabled
+
+                opacity: .5
+                @apply bg-gray-200 shadow-none hover:bg-gray-200
+            @apply bg-white hover:bg-green-400 shadow-lg hover:shadow-none md:absolute h-10 w-10 rounded-full  flex justify-center items-center
+
+            // @apply bg-white hover:bg-green-400 shadow-lg hover:shadow-none absolute h-10 w-10 rounded-full  flex justify-center items-center
+            span
+                position: relative
+                top: -.2rem
+        &.game-carousel__carousel .owl-nav button.owl-prev
+            @apply  -left-4 sm:-left-14
+        &.game-carousel__carousel .owl-nav button.owl-next
+            @apply -right-4 sm:-right-14
+        &.game-carousel__carousel button.owl-dot
+            width: 10px
+            height: 10px
+            background: #E5E2DC
+            border-radius: 30px
+            margin: 0 5px
+
+            &:focus
+                outline: none
+            &.active
+                width: 50px
+                height: 10px
+                background: #9DCB45
+                border-radius: 40px
+
+.gallery
+    &__item
+
+        width: auto
+        @apply overflow-hidden mb-4
+        &__content
+            @apply  relative
+            img
+
+                width: 100%
