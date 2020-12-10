@@ -22,7 +22,7 @@ window.onload = ()=> {
 		$('#game-carousel').owlCarousel({
 			margin: 30,
 			autoWidth: true,
-			// dots: false,
+			autoHeight: true,
 			nav: true,
 			responsive : {
 				0 : {
