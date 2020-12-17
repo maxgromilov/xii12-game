@@ -4,10 +4,18 @@ section.section-nav
       a.section-nav__logo(href="/")
         img(src="img/src/logo.svg", alt="")
       nav.section-nav__nav.hidden
-        - var navArr = [{name: "Каталог", link: "/" },{name: "О компании", link: "/about" }, {name: "Поддержка", link: "/support" }]
-        each nav in navArr 
+        li.section-nav__nav__item.section-nav__nav__item__dropdown
+          div  Каталог
+          .section-nav__nav__item__submenu.hidden(role='menu', aria-orientation='vertical', aria-labelledby='user-menu')
+            - var navGames = [{game: "Casual GG", link: "/casual-gg.html"}, {game: "Rainbow Mine", link: "/rainbow-mine.html"} , {game: "Planets Juggler", link: "/planets-juggler.html"}]
+            each navGame in navGames
+              a.section-nav__nav__item__submenu__item(href=navGame.link, class='hover:bg-gray-100', role='menuitem') #{navGame.game}
+        - var navArr = [{name: "О компании", link: "/about" }, {name: "Поддержка", link: "/support" }]
+        each nav in navArr
+          
           li.section-nav__nav__item
             a(href=nav.link) #{nav.name}
+            
       .section-nav__search
         label(for="search-nav")
           <svg width="19" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.759" cy="7.688" r="6.688" stroke="currentColor" stroke-width="2"/><rect x="12.031" y="13.168" width="1.708" height="6.834" rx=".854" transform="rotate(-45 12.03 13.168)" fill="currentColor"/></svg> 

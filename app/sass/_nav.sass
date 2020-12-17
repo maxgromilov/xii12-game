@@ -14,12 +14,15 @@
             display: flex !important
         @apply hidden  py-6 md:py-0 flex-col flex md:flex-row absolute bg-white md:static md:flex m-auto left-0 top-full right-0
         &__item
-            @apply relative uppercase list-none  py-1 my-1 md:py-0 md:my-0 text-sm mx-auto md:mx-4
+            @apply text-center relative uppercase list-none  py-1 my-1 md:py-0 md:my-0 text-sm mx-auto md:mx-4
             &:hover
                 &:after
-
                     content: " "
-                    @apply absolute -bottom-0 md:-bottom-2 left-0 right-0 bg-green-500 h-1
+                    @apply absolute -bottom-0 md:-bottom-2 left-0 right-0 bg-green-500 md:h-1
+            &__submenu
+                @apply md:text-left origin-top-right md:absolute left-0 mt-2 w-48 md:rounded-md md:shadow-lg py-1 bg-white md:ring-1 ring-black ring-opacity-5
+                &__item
+                    @apply normal-case block px-4 py-2 text-sm text-gray-700
 
     &__lang
         @apply hidden md:flex my-auto ml-4

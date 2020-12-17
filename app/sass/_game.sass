@@ -24,10 +24,15 @@
         &__buttons
             @apply flex pt-4
         &__button
+
             @apply pt-4 block
             img
                 @apply max-h-16 w-auto
             &--first
                 @apply mr-2 md:mr-8
+            &--under-construction
+                @apply border mt-4 border-gray-200 hover:border-green-400 cursor-pointer bg-white text-center text-black hover:bg-green-400 hover:text-white py-3 px-8 flex rounded-full items-center
+                svg
+                    @apply ml-4
         &__image
             @apply w-full md:hidden block mb-8 rounded-2xl overflow-hidden shadow-xl

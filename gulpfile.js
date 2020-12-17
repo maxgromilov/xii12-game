@@ -69,7 +69,7 @@ function scripts() {
 function styles() {
 	const plugins = [
 		tailwindcss(tailwindConfig),
-		cssnano(),
+		
     	purgecss({ 
 			content: [' app/*.html', 'app/js/app.min.js'], 
 			safelist: [
@@ -102,8 +102,10 @@ function styles() {
 				'md:grid-cols-10',
 				'md:grid-cols-11',
 				'md:grid-cols-12',
+				'md:text-center'
 				
-			]})
+			]}),
+			cssnano(),
 	];
 	return src('app/sass/main.sass')
 	.pipe(sass())

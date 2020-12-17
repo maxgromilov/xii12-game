@@ -16,6 +16,12 @@ window.onload = ()=> {
 			$(this).parent(".dropdown").find('.dropdown__list').toggleClass('hidden')
 		// )
 	})
+	$('.section-nav__nav__item__dropdown').on('click', function() {
+		// console.log(
+			
+			$(this).find('.section-nav__nav__item__submenu').toggleClass('hidden')
+		// )
+	})
 	setTimeout(() => {
 			
 		//- Документация https://owlcarousel2.github.io/OwlCarousel2/
